@@ -1,0 +1,29 @@
+{
+  "name": "restapis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "expect": "^29.5.0",
+    "express": "^4.18.2",
+    "g": "^2.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "mocha": "^10.2.0",
+    "mongoose": "^7.0.5",
+    "ngrok": "^4.3.3",
+    "should": "^13.2.3",
+    "sinon": "^15.0.4"
+  }
+}
