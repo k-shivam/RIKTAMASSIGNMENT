@@ -17,9 +17,14 @@ After that a normal user can create edit delete update a group.
     SECRET = supersecret
 ```
     
-3. After that you can do npm start you server will be up.
+# After that you can do npm start you server will be up.
 
-4. To test the apis you can run the test.js file using:
-  npm test and all the test cases will run.
+To test the apis you can run the test.js file using:
+```
+npm test 
+
+```
+and all the test cases will run.
+
   
   
