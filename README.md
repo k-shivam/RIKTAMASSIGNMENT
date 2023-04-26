@@ -7,13 +7,15 @@ After that a normal user can create edit delete update a group.
 
 
 
-##Steps to run this project:
+## Steps to run this project:
 
+``` 
 1. npm i 
 2. create a .env file and add following:
     ENV = local
     PORT = 9000
     SECRET = supersecret
+```
     
 3. After that you can do npm start you server will be up.
 
