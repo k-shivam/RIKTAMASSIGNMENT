@@ -6,7 +6,7 @@ describe('add /users with admin rights', () => {
   it('responds with a 200 status code', (done) => {
     request(app)
       .post('/users/addUsers')
-      .send({name:"kumar", email:"km@gmail.com", password:"kuma@1234", isAdmin: false})
+      .send({name:"kumarm", email:"kum@gmail.com", password:"kum@1234", isAdmin: false})
       .set('x-access-token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDkyNzI1YWZhNTUyYWUzZDExMTI1MCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjUxNTc0OSwiZXhwIjoxNjgyNjAyMTQ5fQ.vvevpEQSuU9Dja6lgnUJlkxwUW7-5lburdR8-AO8yRg")
       .expect(200)
       .end((err, res) => {
@@ -22,7 +22,7 @@ describe('add /users without token', () => {
   it('responds with a 401 status code', (done) => {
     request(app)
       .post('/users/addUsers')
-      .send({name:"kumar", email:"km@gmail.com", password:"kuma@1234", isAdmin: false})
+      .send({name:"numaram", email:"nu@gmail.com", password:"nu@1234", isAdmin: false})
       .expect(401)
       .end((err, res) => {
         if (err) return done(err);
@@ -36,8 +36,8 @@ describe('add /users with non admin rights', () => {
   it('responds with a 401 status code', (done) => {
     request(app)
       .post('/users/addUsers')
-      .send({name:"kumar", email:"km@gmail.com", password:"kuma@1234", isAdmin: false})
-      .set('x-access-token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDkyNzI1YWZhNTUyYWUzZDExMTI1MCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjUxNTc0OSwiZXhwIjoxNjgyNjAyMTQ5fQ.vvevpEQSuU9Dja6lgnUJlkxwUW7-5lburdR8-AO8yRk")
+      .send({name:"mumaram", email:"mum@gmail.com", password:"mum@1234", isAdmin: false})
+      .set('x-access-token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpYmh1QGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjY2Mzc5NH0.Kky9zJ48Nw4nR5KKgtR04jJvYXIyJudWN6XZshzVxnY")
       .expect(401)
       .end((err, res) => {
         if (err) return done(err);
@@ -52,7 +52,7 @@ describe('Register /users', () => {
   it('responds with a 200 status code', (done) => {
     request(app)
       .post('/users/register')
-      .send({name:"nomnom", email:"nomnom@gmail.com", password:"nomnom@1234", isAdmin: false})
+      .send({name:"nom", email:"nom@gmail.com", password:"nom@1234", isAdmin: false})
       .expect(200)
       .end((err, res) => {
         if (err) return done(err);
@@ -68,7 +68,7 @@ describe('update /users with admin rights', () => {
     request(app)
       .put('/users/editUser/64493270dfc039b50bfcc0f2')
       .send({name:"Ehlll", email:"hells@gmail.com", isAdmin: false})
-      .set('x-access-token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDkyNzI1YWZhNTUyYWUzZDExMTI1MCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjUxNTc0OSwiZXhwIjoxNjgyNjAyMTQ5fQ.vvevpEQSuU9Dja6lgnUJlkxwUW7-5lburdR8-AO8yRg")
+      .set('x-access-token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpYmh1QGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4MjY2Mzc5NH0.Kky9zJ48Nw4nR5KKgtR04jJvYXIyJudWN6XZshzVxnY")
       .expect(200)
       .end((err, res) => {
         if (err) return done(err);
